@@ -16,3 +16,24 @@ d. Set controller parameters for double lane change maneuver: ![CarSim_DLC_Confi
 f. Set controller parameters for general trajectory: ![CarSim_Traj_Config](https://github.com/user-attachments/assets/28f0970e-32cc-4db3-87fd-50146c032521)
 5. You need to adjust the right configuration in Simulink for the general trajectory of the double lane change maneuver. You need to adapt the reference data, the correct simfile, and the right simulation time as shown in the figure below:
 ![MATLAB_rqsOIXpwPt](https://github.com/user-attachments/assets/999556ee-befa-4b2b-ac80-4e9cb6f4dce9)
+6. Once everything is set properly, you can run the simulation from the Simulink file "steering_mpc" while having the configured Carsim open, and you can observe the controller performance in Simulink. You can readjust the MPC parameters for better performance: (prediction horizon, penalizing weights, constraints, exponential weight, slack variable, etc...) 
+### You might want to check a closely related implementation in this repository (https://github.com/yassinekebbati/GA-optimized-MLP-based-LPV_MPC)
+
+### If you find this work useful or use it in your work, please cite the main paper:
+#### APA:
+Y. Kebbati, N. Ait-Oufroukh, V. Vigneron and D. Ichalal, "Coordinated PSO-PID based longitudinal control with LPV-MPC based lateral control for autonomous vehicles," 2022 European Control Conference (ECC), London, United Kingdom, 2022, pp. 518-523.
+
+
+#### BibTeX:
+@INPROCEEDINGS{9838192,
+  author={Kebbati, Yassine and Ait-Oufroukh, Naima and Vigneron, Vincent and Ichalal, Dalil},
+  booktitle={2022 European Control Conference (ECC)}, 
+  title={Coordinated PSO-PID based longitudinal control with LPV-MPC based lateral control for autonomous vehicles}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={518-523},
+  keywords={Heuristic algorithms;Predictive models;Cost function;Mathematical models;Tires;Stability analysis;Vehicle dynamics;Autonomous driving;Particle swarm optimization;Model predictive control;Adaptive control},
+  doi={10.23919/ECC55457.2022.9838192}}
+
+
