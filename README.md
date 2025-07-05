@@ -17,7 +17,7 @@ This implementation runs a cosimulation between Matlab and Carsim; you need to h
 5. Set controller parameters for general trajectory: ![CarSim_Traj_Config](https://github.com/user-attachments/assets/28f0970e-32cc-4db3-87fd-50146c032521)
    
 ### To run Carsim and Simulink cosimulation, you need to do the following: 
-1. You need to adjust the right configuration in Simulink for the general trajectory of the double lane change maneuver. You need to adapt the reference data, the correct simfile, and the right simulation time (84s for general trajectory/8.5s for double lane change) as shown in the figure below:
+1. You need to adjust the right configuration in Simulink for the general trajectory of the double lane change maneuver. You need to adapt the reference data, the correct simfile (simfile_traj for general trajectory/simfile_DLC for double lane change), and the right simulation time (84s for general trajectory/8.5s for double lane change) as shown in the figure below:
 ![MATLAB_rqsOIXpwPt](https://github.com/user-attachments/assets/999556ee-befa-4b2b-ac80-4e9cb6f4dce9)
 2. Once everything is set properly, you can run the simulation from the Simulink file "steering_mpc" while having the configured Carsim open, and you can observe the controller performance in Simulink. You can readjust the MPC parameters for better performance: (prediction horizon, penalizing weights, constraints, exponential weight, slack variable, etc...) 
 ### You might want to check a closely related implementation in this repository (https://github.com/yassinekebbati/GA-optimized-MLP-based-LPV_MPC)
