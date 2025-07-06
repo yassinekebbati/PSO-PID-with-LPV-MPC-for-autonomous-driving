@@ -23,7 +23,7 @@ This implementation runs a cosimulation between Matlab and Carsim; you need to h
 
 ## To run PSO-PID optimization you do the following steps:
 
-1. Run the Matlab script "PSO_PID_APP.m" from the folder PSO-PID.
+1. Run the Matlab script "PSO_PID_APP.m" from the folder PSO-PID, you can tweak the PSO algorithm by changing parameters like number of iterations, number of population, lower and upper bounds of decision variables, or use a different objective function.
 2. Make sure that within the Simulink model "PSO_PID.slx" you have the same dynamics for brake and accelerator if you intend to use the optimized PID gains in MATLAB/carsim cosimulation.
 3. The script is used to optimize PID gains with the PSO algorithm using a simplified longitudinal vehicle model, but you can do the same optimization with the carsim model; it will take longer to run.
 
