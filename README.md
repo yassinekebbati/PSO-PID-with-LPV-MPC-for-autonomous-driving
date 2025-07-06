@@ -20,6 +20,15 @@ This implementation runs a cosimulation between Matlab and Carsim; you need to h
 1. You need to adjust the right configuration in Simulink for the general trajectory of the double lane change maneuver. You need to adapt the reference data, the correct simfile (simfile_traj for general trajectory/simfile_DLC for double lane change), and the right simulation time (84s for general trajectory/8.5s for double lane change) as shown in the figure below:
 ![MATLAB_rqsOIXpwPt](https://github.com/user-attachments/assets/999556ee-befa-4b2b-ac80-4e9cb6f4dce9)
 2. Once everything is set properly, you can run the simulation from the Simulink file "steering_mpc.slx" while having the configured Carsim open, and you can observe the controller performance in Simulink. You can readjust the MPC parameters for better performance in file "MPCController.m": (prediction horizon N, penalizing weights Q/R, constraints, exponential weight a, slack variable epsi, etc...) 
+
+## To run PSO-PID optimization you do the following steps:
+
+1. Run the Matlab script "PSO_PID_APP.m" from the folder PSO-PID.
+2. Make sure that within the Simulink model "PSO_PID.slx" you have the same dynamics for brake and accelerator if you intend to use the optimized PID gains in MATLAB/carsim cosimulation.
+3. The script is used to optimize PID gains with the PSO algorithm using a simplified longitudinal vehicle model, but you can do the same optimization with the carsim model; it will take longer to run.
+
+
+
 ### You might want to check a closely related implementation in this repository (https://github.com/yassinekebbati/GA-optimized-MLP-based-LPV_MPC)
 
 ### If you find this work useful or use it in your work, please cite the main paper:
